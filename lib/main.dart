@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'PageTutorial11.dart'; // Import the new file
+import 'PageTutorial11_2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ABP_Week 11',
+      title: 'ABP Week 11',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -33,7 +34,7 @@ class MyHomePage extends StatelessWidget {
         title: Text(title),
       ),
       body: Container(
-          color: Color.fromARGB(255, 50, 19, 107),
+          color: Colors.green[100],
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -47,7 +48,8 @@ class MyHomePage extends StatelessWidget {
                 ),
                 const Text(
                   'NIM: 1301213447',
-                  style: TextStyle(fontSize: 18, color: Colors.grey),
+                  style: TextStyle(
+                      fontSize: 18, color: Color.fromARGB(255, 50, 19, 107)),
                 ),
                 const SizedBox(height: 20),
                 ElevatedButton(
@@ -59,6 +61,17 @@ class MyHomePage extends StatelessWidget {
                     );
                   },
                   child: const Text('Move to Tutorial 11-1'),
+                ),
+                const SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Tutorial11_2Page()),
+                    );
+                  },
+                  child: const Text('Move to Tutorial 11-2'),
                 ),
               ],
             ),
